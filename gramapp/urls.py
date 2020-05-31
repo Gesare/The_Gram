@@ -1,6 +1,6 @@
 from django.urls import path, include
 from . import views
-from instapp.views import PostLikeToggle, PostLikeAPIToggle
+from gramapp.views import PostLikeToggle, PostLikeAPIToggle
 
 urlpatterns = [
     path('signup/', views.signup, name='signup'),
