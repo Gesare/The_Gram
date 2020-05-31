@@ -13,7 +13,9 @@
     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                
+                <li class="nav-item active">
+                    <a class="nav-item nav-link" href="/"> Home </a> 
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-item nav-link" href="/admin/auth/user/add"> Admin</a>
                 </li>
@@ -27,8 +29,8 @@
             </ul>
            <form class="mb-0 h1 ml-auto mr-auto" id="searchform" action="{% url 'search' %}" >
              <input name="search_user" autocomplete="off" id="searching" class="form-control d-none d-md-block" placeholder="Search">
-              <i class="spinner "></i>
-           </form>  
+            <i class="spinner "></i>
+            </form>  
         </div>
     </nav>
 </body>
