@@ -23,29 +23,13 @@
                         <br>
                         <button type="submit" class="btn btn-primary btn-sm D-block mx-auto"> Log In</button>
                     </form>
-                    <!-- <a href="{% url 'social:begin' 'google' %}">Google+</a> -->
                     <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-social-icon btn-facebook"><img width="10%" src="../../../static/images/fa-facebook.png">  Login with Facebook</a>
-                    <a href="{% url 'social:begin' 'github' %}" class="btn btn-social-icon btn-github"><img width="8%" src="../../../static/images/fa-github.png">  Login with Github</a>
-                    <!-- <a href="{% url 'social:begin' 'twitter' %}">Login with Twitter</a> -->
                 </div>
                 <a href="" class="D-block mx-auto mb-3">Forgot password? </a>
             </div>
             <div class="card mt-2">
                 <div class="card-body mt-3 mb-3 mr-2 ml-4">
                     Don't have an account? <a href="{% url 'signup' %}">Sign up</a>
-                </div>
-            </div>
-            <div container>
-                <p class="text-center mt-4">Get the app</p>
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-5 mb-2">
-                        <img src="{% static 'images/insta2.png' %}" alt="" width="100%" class="download">
-                    </div>
-                    <div class="col-md-5 mb-2">
-                        <img src="{% static 'images/insta1.png' %}" alt="" width="100%" class="download">
-                    </div>
-                    <div class="col-md-1"></div>
                 </div>
             </div>
         </div>
