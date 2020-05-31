@@ -1,8 +1,10 @@
+beautifulsoup4==4.9.1
 certifi==2019.9.11
 chardet==3.0.4
 defusedxml==0.6.0
 dj-database-url==0.5.0
 Django==2.0.12
+django-bootstrap4==1.1.1
 django-crispy-forms==1.8.0
 django-heroku==0.3.1
 django-mongoengine==0.3.3
@@ -27,6 +29,7 @@ social-auth-app-django==3.1.0
 social-auth-app-django-mongoengine==1.0.0
 social-auth-core==3.2.0
 social-auth-storage-mongoengine==1.0.1
+soupsieve==2.0.1
 sqlparse==0.3.0
 urllib3==1.25.6
 whitenoise==4.1.4
