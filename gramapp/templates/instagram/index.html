@@ -8,7 +8,6 @@
         <div class="col-md-1"></div>
         <div class="col-md-7">
             <div class="row">
-             <br>
                 <button class="btn btn-sm btn-warning ml-4 mb-3" data-toggle="modal" data-target="#imageUpload">
                     Post Image
                 </button>
@@ -27,7 +26,7 @@
                                     {% csrf_token %}
                                     {{ form|crispy }}
                                     <button class="btn btn-sm btn-success">Upload</button>
-                                    <button type="button" class="btn btn-sm btn-outline-danger" data-dismiss="modal">
+                                    <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">
                                         Close
                                     </button>
                                 </form>
@@ -60,7 +59,7 @@
                     </a></button>
                 </div>
                 <span class="ml-4 mb-1"><strong>{{image.likes.count}} like{{image.likes.count|pluralize}}</strong></span>
-                <span class="text-secondary ml-4 viewall"><a href="{% url 'comment' image.id %}">View all {{image.comments.count}} comment{{image.comments.count|pluralize}}</a></span>
+                <span class="text-secondary ml-4 viewall"><a href="{% url 'comment' image.id %}">View all {{image.comments.count}} Comment{{image.comments.count|pluralize}}</a></span>
                 <div class="allcomments mb-4">
                     {% for comment in image.comments.all|slice:'2' %}
                     <div class="comment">
