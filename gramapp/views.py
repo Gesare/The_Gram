@@ -44,7 +44,7 @@ def index(request):
         'users': users,
 
     }
-    return render(request, 'instagram/index.html', params)
+    return render(request, 'index.html', params)
 
 @login_required(login_url='login')
 def profile(request, username):
@@ -65,7 +65,7 @@ def profile(request, username):
         'images': images,
 
     }
-    return render(request, 'instagram/profile.html', params)
+    return render(request, 'profile.html', params)
 
 @login_required(login_url='login')
 def user_profile(request, username):
@@ -88,7 +88,7 @@ def user_profile(request, username):
         'follow_status': follow_status
     }
     print(followers)
-    return render(request, 'instagram/user_profile.html', params)
+    return render(request, 'user_profile.html', params)
 
 @login_required(login_url='login')
 def post_comment(request, id):
@@ -112,7 +112,7 @@ def post_comment(request, id):
         'is_liked': is_liked,
         'total_likes': image.total_likes()
     }
-    return render(request, 'instagram/single_post.html', params)
+    return render(request, 'single_post.html', params)
 
 class PostLikeToggle(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
@@ -170,7 +170,7 @@ def like_post(request):
         'total_likes': image.total_likes()
     }
     if request.is_ajax():
-        html = render_to_string('instagram/like_section.html', params, request=request)
+        html = render_to_string('like_section.html', params, request=request)
         return JsonResponse({'form': html})
 
 @login_required(login_url='login')
@@ -184,10 +184,10 @@ def search_profile(request):
             'results': results,
             'message': message
         }
-        return render(request, 'instagram/results.html', params)
+        return render(request, 'results.html', params)
     else:
         message = "You haven't searched for any image category"
-    return render(request, 'instagram/results.html', {'message': message})
+    return render(request, 'results.html', {'message': message})
 
 def follow(request, to_follow):
     if request.method == 'GET':
