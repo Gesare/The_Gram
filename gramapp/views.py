@@ -31,7 +31,10 @@ def signup(request):
 def explore(request):
   title = 'Explore'
   images = Post.objects.all()
-  params = {'images': images}
+  users = User.objects.exclude(id=request.user.id)
+  params = {'images': images ,
+            'users': users
+              }
   return render(request,'instagram/explore.html',params)
 
 
