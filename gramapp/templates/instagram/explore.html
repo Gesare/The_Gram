@@ -6,7 +6,7 @@
         {% for image in images %}
             <div class="card border-secondary">
             <img class="card-img-top" class="img-responsive" src="{{image.image.url}}" data-target="#extraModal{{image.id}}" data-toggle="modal" size="100px200">
-            
+            <a href="{% url 'user_profile' image.user.user.username  %}" class="mt-4 user"></a>
             </div>
         {%endfor%}
   </div>
