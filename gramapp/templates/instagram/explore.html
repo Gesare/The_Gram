@@ -1,0 +1,15 @@
+{%extends 'instagram/layout.html'%}
+{% load static%}
+{% block content %}
+<div class="container text-center">
+  <div class="card-columns">
+        {% for image in images %}
+            <div class="card border-secondary">
+            <img class="card-img-top" class="img-responsive" src="{{image.image.url}}" data-target="#extraModal{{image.id}}" data-toggle="modal" size="100px200">
+            
+            </div>
+        {%endfor%}
+  </div>
+
+</div>
+{%endblock%}

@@ -26,6 +26,15 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
 
+
+@login_required   
+def explore(request):
+  title = 'Explore'
+  images = Post.objects.all()
+  params = {'images': images}
+  return render(request,'instagram/explore.html',params)
+
+
 @login_required(login_url='login')
 def index(request):
     images = Post.objects.all()
