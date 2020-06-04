@@ -1,5 +1,11 @@
 virtual/
+*.pyc 
+__pycache__
+.vscode
 .env
-.vscode/
-*.pyc
-db.sqlite3
+mongoengine
+setup.py
+setup.cfg
+mongoengine.egg-info
+dist
+build
